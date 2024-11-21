@@ -1,0 +1,73 @@
+.to-do {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #222; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: black;
+    border: 2px solid #0ff;
+    appearance: none;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox:checked {
+    background-color: #0ff;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.checkbox:checked::before {
+    content: '✓';
+    position: absolute;
+    top: -4px;
+    left: 2px; 
+    font-size: 16px;
+    color: black;
+}
+
+
+.description {
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 10px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.to-do.completed {
+    background-color: #333;
+}
+
+.delete-btn {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color: #f0f;
+    box-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    box-shadow: 0 0 15px #f0f, 0 0 30px #f0f;
+    transform: scale(1.1);
+}
