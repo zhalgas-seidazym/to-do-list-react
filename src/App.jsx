@@ -9,20 +9,15 @@ function App() {
   const [toDoList, setToDoList] = useState([])
 
   const addToDo = (toDo) => {
-    setToDoList((prevToDoList) => [...prevToDoList, toDo])
+    setToDoList([...toDoList, toDo])
   }
 
   const removeToDo = (toDoIndex) => {
-    setToDoList((prevToDoList) => prevToDoList.filter((_, index) => index !== toDoIndex))  
+    setToDoList(toDoList.filter((_, index) => index !== toDoIndex))  
   }
 
-  const toggleDone = (toDoIndex) => {
-    const update = [...toDoList]
-    update[toDoIndex] = {
-      description: update[toDoIndex].description,
-      done: !update[toDoIndex].done
-    }    
-    setToDoList(update)
+  const toggleDone = (toDoIndex) => {   
+    setToDoList(toDoList.map((toDo, index) => index === toDoIndex ? {...toDo, done: !toDo.done} : toDo))
   }
   return (
     <>
