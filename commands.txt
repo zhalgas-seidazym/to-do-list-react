@@ -1,3 +1,5 @@
+minikube start
+
 minikube tunnel 
 
 kubectl apply -f deployment.yaml
