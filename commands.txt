@@ -1,11 +1,18 @@
 minikube start
+minikube stop
+minikube delete
+
+minikube status
+
+minikube image load zhalgas715/to-do-react:latest
+minikube ssh -- docker images
 
 minikube tunnel 
 
 kubectl apply -f deployment.yaml
 kubectl get pods
 kubectl get svc
-kubectl logs todoapp-deployment-react-d97b587d8-zrwqc
+kubectl logs todoapp-deployment-react-d97b587d8-zhgsp
 
 kubectl delete deployments --all
 kubectl delete pods --all
