@@ -1,0 +1,10 @@
+minikube tunnel 
+
+kubectl apply -f deployment.yaml
+kubectl get pods
+kubectl get svc
+kubectl logs todoapp-deployment-react-d97b587d8-zrwqc
+
+kubectl delete deployments --all
+kubectl delete pods --all
+kubectl delete svc --all
